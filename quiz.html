@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+
+  <!-- Website Components -->
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Geography map and quiz">
+    <title>GeoExpert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+
+
+
+
+  </head>
+
+  <body style="background-color: #405441;">
+    
+    <!-- Blur Background -->
+    <div id="startOverlay">
+      <button id="startButton">START QUIZ</button>
+    </div>
+
+
+
+
+
+    <header>
+      
+      <!--Navigation Bar-->
+      <nav class="navbar">
+        <div class="logo">
+          <h4>GeoExpert</h4>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="quiz.html">USA QUIZ</a></li>
+          <li><a href="./asia-quiz.html">ASIA QUIZ</a></li>
+          <li><a href="./southamerica-quiz.html">SOUTH AMERICA QUIZ</a></li>
+          <li><a href="./africa-quiz.html">AFRICA QUIZ</a></li>
+        </ul>
+        <div class="burger"/>
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </nav>
+
+    </header>
+
+
+
+    <main>
+
+      <div class="box-row">
+      
+        <div class="box-group">
+          <span class="box-label">CLICK ON:</span>
+          <div class="click-box" id="questionBox">STATE</div>
+        </div>
+
+        <div class="box-group">
+          <span class="box-label">SCORE:</span>
+          <div class="click-box" id="scoreBox">0/50</div>
+        </div>
+
+        <div class="box-group">
+          <span class="box-label">TIME:</span>
+          <div class="click-box" id="timeBox">0:00</div>
+        </div>
+
+      </div>
+
+      <svg class="svg-map" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid meet">
+        <image href="./Map-USA.svg" width="1400" height="900" />
+
+        <polygon class="state" data-name="Alabama" points="969,519,964,612,969,653,995,656,989,635,1051,628,1052,586,1027,512" />
+        <polygon class="state" data-name="Alaska" points="326,644,331,733,419,828,382,868,254,795,171,839,15,825,23,780,121,766,143,621,281,608" />
+        <polygon class="state" data-name="Arizona" points="346,431,464,450,443,606,389,602,305,553,322,506,323,473,330,454,339,457" />
+        <polygon class="state" data-name="Arkansas" points="811,481,913,478,908,495,924,492,892,580,823,581,824,569,812,564" />
+        <polygon class="state" data-name="California" points="156,231,242,255,224,336,320,477,317,503,302,543,248,538,215,517,143,425,130,295" />
+        <polygon class="state" data-name="Colorado" points="484,334,635,347,628,465,468,446" />
+        <polygon class="state" data-name="Connecticut" points="1272,263,1303,256,1307,268,1273,293" />
+        <polygon class="state" data-name="Delaware" points="1234,342,1247,375,1273,368" />
+        <polygon class="state" data-name="Florida" points="994,638,1000,655,1089,689,1148,770,1187,809,1241,788,1220,708,1143,628,1125,635,1062,638,1053,630" />
+        <polygon class="state" data-name="Georgia" points="1031,513,1056,587,1052,628,1063,633,1126,630,1140,624,1152,585,1082,512" />
+        <polygon class="state" data-name="Hawaiʻi" points="375,703,372,724,396,738,422,736,469,765,510,805,530,858,581,872,612,839,613,796,550,742,485,698,414,682" />
+        <polygon class="state" data-name="Idaho" points="356,72,337,135,338,174,336,186,325,196,324,212,314,228,312,249,304,268,432,296,441,226,410,228,387,186,383,151,382,138,365,114,373,72" />
+        <polygon class="state" data-name="Illinois" points="891,299,950,295,963,326,968,387,953,438,954,454,937,454,911,430,912,417,876,383,887,336,905,320" />
+        <polygon class="state" data-name="Indiana" points="965,326,973,320,1022,315,1031,388,996,428,958,440,973,387" />
+        <polygon class="state" data-name="Iowa" points="764,276,765,307,772,335,787,360,871,355,877,361,884,334,900,318,881,299,873,272" />
+        <polygon class="state" data-name="Kansas" points="638,375,631,462,806,470,798,410,781,380" />
+        <polygon class="state" data-name="Kentucky" points="938,472,1070,456,1098,429,1080,404,1035,392,1000,429,963,441,957,456,942,459" />
+        <polygon class="state" data-name="Louisiana" points="824,585,824,613,840,648,832,677,850,696,897,695,927,701,936,658,929,640,884,642,900,600,894,581" />
+        <polygon class="state" data-name="Maine" points="1299,157,1318,210,1387,156,1352,69,1300,77" />
+        <polygon class="state" data-name="Maryland" points="1154,354,1154,367,1183,352,1213,383,1253,383,1229,344" />
+        <polygon class="state" data-name="Massachusetts" points="1271,240,1271,258,1313,248,1323,261,1331,253,1321,218,1313,234" />
+        <polygon class="state" data-name="Michigan" points="897,184,900,194,929,199,948,216,975,318,1056,309,1077,266,1032,173,988,153,921,147" />
+        <polygon class="state" data-name="Minnesota" points="751,117,796,96,895,137,839,204,839,221,863,257,875,270,764,270,766,214,746,135" />
+        <polygon class="state" data-name="Mississippi" points="967,519,916,522,894,575,905,600,886,639,932,634,938,656,968,653,960,608" />
+        <polygon class="state" data-name="Missouri" points="780,377,800,405,809,478,916,473,913,491,922,491,927,475,936,457,908,429,906,414,873,382,877,367,865,359,779,362" />
+        <polygon class="state" data-name="Montana" points="374,73,603,108,594,226,447,209,443,220,412,223,390,184,384,131,368,111" />
+        <polygon class="state" data-name="Nebraska" points="594,289,586,339,638,345,638,370,774,376,777,354,764,310,714,295" />
+        <polygon class="state" data-name="Nevada" points="244,256,369,286,337,451,326,452,321,475,228,336" />
+        <polygon class="state" data-name="New Hampshire" points="1288,232,1310,229,1318,216,1294,159,1284,205" />
+        <polygon class="state" data-name="New Jersey" points="1246,291,1246,313,1257,323,1244,338,1256,351,1266,325,1289,293,1268,295" />
+        <polygon class="state" data-name="New Mexico" points="467,451,446,609,499,607,504,595,591,607,600,466" />
+        <polygon class="state" data-name="New York" points="1250,179,1266,234,1271,282,1268,292,1246,286,1232,272,1135,287,1126,251,1205,164" />
+        <polygon class="state" data-name="North Carolina" points="1062,507,1132,493,1147,501,1174,499,1203,520,1239,488,1252,433,1117,456" />
+        <polygon class="state" data-name="North Dakota" points="608,110,602,197,760,200,745,135,745,116" />
+        <polygon class="state" data-name="Ohio" points="1026,316,1051,314,1115,292,1122,329,1117,365,1091,402,1063,397,1035,386" />
+        <polygon class="state" data-name="Oklahoma" points="604,466,603,473,675,478,673,535,699,549,735,559,754,556,767,559,795,558,809,564,808,490,803,472" />
+        <polygon class="state" data-name="Oregon" points="201,116,232,145,262,146,283,151,307,150,333,164,335,177,325,193,322,208,310,221,311,244,305,267,154,225,173,140" />
+        <polygon class="state" data-name="Pennsylvania" points="1119,293,1130,288,1154,289,1230,276,1237,289,1241,314,1252,321,1230,338,1130,356" />
+        <polygon class="state" data-name="Rhode Island" points="1309,255,1313,278,1324,268" />
+        <polygon class="state" data-name="South Carolina" points="1084,511,1152,579,1193,556,1199,520,1172,501,1143,503,1131,495,1105,499" />
+        <polygon class="state" data-name="South Dakota" points="602,200,593,286,713,291,761,305,759,204" />
+        <polygon class="state" data-name="Tennessee" points="929,477,918,517,1057,506,1111,456" />
+        <polygon class="state" data-name="Texas" points="603,475,671,481,671,538,728,563,755,560,792,563,819,572,819,612,833,642,828,677,733,790,665,770,617,701,574,710,500,608,505,598,592,609" />
+        <polygon class="state" data-name="Utah" points="373,288,432,300,431,326,480,334,463,445,347,425" />
+        <polygon class="state" data-name="Vermont" points="1253,179,1289,166,1279,208,1286,231,1271,236" />
+        <polygon class="state" data-name="Virginia" points="1077,456,1247,431,1194,363,1173,378,1152,398,1141,430,1103,433" />
+        <polygon class="state" data-name="Washington" points="191,101,234,142,263,142,284,148,310,146,333,159,335,134,356,63,207,36" />
+        <polygon class="state" data-name="West Virginia" points="1086,405,1105,430,1138,427,1146,398,1189,360,1178,355,1157,370,1150,361,1129,361,1122,336,1120,365" />
+        <polygon class="state" data-name="Wisconsin" points="860,178,843,206,844,225,877,271,884,295,949,293,952,236,945,218,927,200,898,199,891,179" />
+        <polygon class="state" data-name="Wyoming" points="450,211,435,323,582,339,594,232" />
+      </svg>
+
+      <!-- JavaScript -->
+      <script src="./script.js"></script>
+
+    </main>
+    
+
+
+    <footer>
+    
+    </footer>
+
+
+
+  </body>
+
+</html>
