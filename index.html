@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+
+  <!-- Website Components -->
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Geography map and quiz">
+    <title>GeoExpert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+
+
+
+
+  </head>
+
+  <body style="background-color: #405441;">
+
+    <header>
+      
+      <!--Navigation Bar-->
+      <nav class="navbar">
+        <div class="logo">
+          <h4>GeoExpert</h4>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="quiz.html">USA QUIZ</a></li>
+          <li><a href="./asia-quiz.html">ASIA QUIZ</a></li>
+          <li><a href="./southamerica-quiz.html">SOUTH AMERICA QUIZ</a></li>
+          <li><a href="./africa-quiz.html">AFRICA QUIZ</a></li>
+        </ul>
+        <div class="burger"/>
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </nav>
+
+      <!-- JavaScript -->
+      <script src="./script.js"></script>
+    
+    </header>
+    
+
+
+
+
+    <main>
+
+        <svg class="svg-map" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid meet">
+          <image href="./Map-USA.svg" width="1400" height="900" />
+          
+          <!-- Alabama -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="969,519,964,612,969,653,995,656,989,635,1051,628,1052,586,1027,512"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="963" y="560" width="150" height="40">
+              <div class="tooltip-text">Alabama</div>
+            </foreignObject>
+          </g>
+
+          <!-- Alaska -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="326,644,331,733,419,828,382,868,254,795,171,839,15,825,23,780,121,766,143,621,281,608"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="210" y="685" width="150" height="40">
+              <div class="tooltip-text">Alaska</div>
+            </foreignObject>
+          </g>
+
+          <!-- Arizona -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="346,431,464,450,443,606,389,602,305,553,322,506,323,473,330,454,339,457"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="350" y="500" width="150" height="40">
+              <div class="tooltip-text">Arizona</div>
+            </foreignObject>
+          </g>
+
+          <!-- Arkansas -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="811,481,913,478,908,495,924,492,892,580,823,581,824,569,812,564"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="818" y="510" width="150" height="40">
+              <div class="tooltip-text">Arkansas</div>
+            </foreignObject>
+          </g>
+
+          <!-- California -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="156,231,242,255,224,336,320,477,317,503,302,543,248,538,215,517,143,425,130,295"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="171" y="385" width="150" height="40">
+              <div class="tooltip-text">California</div>
+            </foreignObject>
+          </g>
+
+          <!-- Colorado -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="484,334,635,347,628,465,468,446"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="513" y="385" width="150" height="40">
+              <div class="tooltip-text">Colorado</div>
+            </foreignObject>
+          </g>
+
+          <!-- Connecticut -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1272,263,1303,256,1307,268,1273,293"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1242" y="262" width="150" height="40">
+              <div class="tooltip-text">Connecticut</div>
+            </foreignObject>
+          </g>
+
+          <!-- Delaware -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1234,342,1247,375,1273,368"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1200" y="342" width="150" height="40">
+              <div class="tooltip-text">Delaware</div>
+            </foreignObject>
+          </g>
+
+          <!-- Florida -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="994,638,1000,655,1089,689,1148,770,1187,809,1241,788,1220,708,1143,628,1125,635,1062,638,1053,630"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1125" y="690" width="150" height="40">
+              <div class="tooltip-text">Florida</div>
+            </foreignObject>
+          </g>
+
+          <!-- Georgia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1031,513,1056,587,1052,628,1063,633,1126,630,1140,624,1152,585,1082,512"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1057" y="560" width="150" height="40">
+              <div class="tooltip-text">Georgia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Hawaiʻi -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="375,703,372,724,396,738,422,736,469,765,510,805,530,858,581,872,612,839,613,796,550,742,485,698,414,682"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="465" y="735" width="150" height="40">
+              <div class="tooltip-text">Hawaiʻi</div>
+            </foreignObject>
+          </g>
+
+          <!-- Idaho -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="356,72,337,135,338,174,336,186,325,196,324,212,314,228,312,249,304,268,432,296,441,226,410,228,387,186,383,151,382,138,365,114,373,72"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="345" y="230" width="150" height="40">
+              <div class="tooltip-text">Idaho</div>
+            </foreignObject>
+          </g>
+
+          <!-- Illinois -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="891,299,950,295,963,326,968,387,953,438,954,454,937,454,911,430,912,417,876,383,887,336,905,320"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="894" y="360" width="150" height="40">
+              <div class="tooltip-text">Illinois</div>
+            </foreignObject>
+          </g>
+
+          <!-- Indiana -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="965,326,973,320,1022,315,1031,388,996,428,958,440,973,387"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="962" y="350" width="150" height="40">
+              <div class="tooltip-text">Indiana</div>
+            </foreignObject>
+          </g>
+
+          <!-- Iowa -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="764,276,765,307,772,335,787,360,871,355,877,361,884,334,900,318,881,299,873,272"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="803" y="302" width="150" height="40">
+              <div class="tooltip-text">Iowa</div>
+            </foreignObject>
+          </g>
+
+          <!-- Kansas -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="638,375,631,462,806,470,798,410,781,380"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="682" y="407" width="150" height="40">
+              <div class="tooltip-text">Kansas</div>
+            </foreignObject>
+          </g>
+
+          <!-- Kentucky -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="938,472,1070,456,1098,429,1080,404,1035,392,1000,429,963,441,957,456,942,459"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="992" y="420" width="150" height="40">
+              <div class="tooltip-text">Kentucky</div>
+            </foreignObject>
+          </g>
+
+          <!-- Louisiana -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="824,585,824,613,840,648,832,677,850,696,897,695,927,701,936,658,929,640,884,642,900,600,894,581"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="818" y="610" width="150" height="40">
+              <div class="tooltip-text">Louisiana</div>
+            </foreignObject>
+          </g>
+
+          <!-- Maine -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1299,157,1318,210,1387,156,1352,69,1300,77"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1304" y="128" width="150" height="40">
+              <div class="tooltip-text">Maine</div>
+            </foreignObject>
+          </g>
+
+          <!-- Maryland -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1154,354,1154,367,1183,352,1213,383,1253,383,1229,344"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1170" y="345" width="150" height="40">
+              <div class="tooltip-text">Maryland</div>
+            </foreignObject>
+          </g>
+
+          <!-- Massachusetts -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1271,240,1271,258,1313,248,1323,261,1331,253,1321,218,1313,234"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1232" y="235" width="150" height="40">
+              <div class="tooltip-text">Massachusetts</div>
+            </foreignObject>
+          </g>
+
+          <!-- Michigan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="897,184,900,194,929,199,948,216,975,318,1056,309,1077,266,1032,173,988,153,921,147"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="982" y="250" width="160" height="40">
+              <div class="tooltip-text">Michigan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Minnesota -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="751,117,796,96,895,137,839,204,839,221,863,257,875,270,764,270,766,214,746,135"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="757" y="193" width="160" height="40">
+              <div class="tooltip-text">Minnesota</div>
+            </foreignObject>
+          </g>
+
+          <!-- Mississippi -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="967,519,916,522,894,575,905,600,886,639,932,634,938,656,968,653,960,608"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="885" y="570" width="160" height="40">
+              <div class="tooltip-text">Mississippi</div>
+            </foreignObject>
+          </g>
+
+          <!-- Missouri -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="780,377,800,405,809,478,916,473,913,491,922,491,927,475,936,457,908,429,906,414,873,382,877,367,865,359,779,362"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="812" y="407" width="160" height="40">
+              <div class="tooltip-text">Missouri</div>
+            </foreignObject>
+          </g>
+
+          <!-- Montana -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="374,73,603,108,594,226,447,209,443,220,412,223,390,184,384,131,368,111"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="455" y="140" width="160" height="40">
+              <div class="tooltip-text">Montana</div>
+            </foreignObject>
+          </g>
+
+          <!-- Nebraska -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="594,289,586,339,638,345,638,370,774,376,777,354,764,310,714,295"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="655" y="320" width="160" height="40">
+              <div class="tooltip-text">Nebraska</div>
+            </foreignObject>
+          </g>
+
+          <!-- Nevada -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="244,256,369,286,337,451,326,452,321,475,228,336"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="263" y="337" width="160" height="40">
+              <div class="tooltip-text">Nevada</div>
+            </foreignObject>
+          </g>
+
+          <!-- New Hampshire -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1288,232,1310,229,1318,216,1294,159,1284,205"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1227" y="190" width="160" height="40">
+              <div class="tooltip-text">New Hampshire</div>
+            </foreignObject>
+          </g>
+
+          <!-- New Jersey -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1246,291,1246,313,1257,323,1244,338,1256,351,1266,325,1289,293,1268,295"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1205" y="302" width="160" height="40">
+              <div class="tooltip-text">New Jersey</div>
+            </foreignObject>
+          </g>
+
+          <!-- New Mexico -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="467,451,446,609,499,607,504,595,591,607,600,466"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="475" y="512" width="160" height="40">
+              <div class="tooltip-text">New Mexico</div>
+            </foreignObject>
+          </g>
+
+          <!-- New York -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1250,179,1266,234,1271,282,1268,292,1246,286,1232,272,1135,287,1126,251,1205,164"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1175" y="230" width="160" height="40">
+              <div class="tooltip-text">New York</div>
+            </foreignObject>
+          </g>
+
+          <!-- North Carolina -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1062,507,1132,493,1147,501,1174,499,1203,520,1239,488,1252,433,1117,456"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1120" y="458" width="160" height="40">
+              <div class="tooltip-text">North Carolina</div>
+            </foreignObject>
+          </g>
+
+          <!-- North Dakota -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="608,110,602,197,760,200,745,135,745,116"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="626" y="145" width="160" height="40">
+              <div class="tooltip-text">North Dakota</div>
+            </foreignObject>
+          </g>
+
+          <!-- Ohio -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1026,316,1051,314,1115,292,1122,329,1117,365,1091,402,1063,397,1035,386"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1043" y="338" width="160" height="40">
+              <div class="tooltip-text">Ohio</div>
+            </foreignObject>
+          </g>
+
+          <!-- Oklahoma -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="604,466,603,473,675,478,673,535,699,549,735,559,754,556,767,559,795,558,809,564,808,490,803,472"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="696" y="498" width="150" height="40">
+              <div class="tooltip-text">Oklahoma</div>
+            </foreignObject>
+          </g>
+
+          <!-- Oregon -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="201,116,232,145,262,146,283,151,307,150,333,164,335,177,325,193,322,208,310,221,311,244,305,267,154,225,173,140"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="208" y="181" width="150" height="40">
+              <div class="tooltip-text">Oregon</div>
+            </foreignObject>
+          </g>
+
+          <!-- Pennsylvania -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1119,293,1130,288,1154,289,1230,276,1237,289,1241,314,1252,321,1230,338,1130,356"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1126" y="298" width="150" height="40">
+              <div class="tooltip-text">Pennsylvania</div>
+            </foreignObject>
+          </g>
+
+          <!-- Rhode Island -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1309,255,1313,278,1324,268"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1250" y="250" width="150" height="40">
+              <div class="tooltip-text">Rhode Island</div>
+            </foreignObject>
+          </g>
+
+          <!-- South Carolina -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1084,511,1152,579,1193,556,1199,520,1172,501,1143,503,1131,495,1105,499"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1085" y="520" width="150" height="40">
+              <div class="tooltip-text">South Carolina</div>
+            </foreignObject>
+          </g>
+
+          <!-- South Dakota -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="602,200,593,286,713,291,761,305,759,204"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="622" y="232" width="150" height="40">
+              <div class="tooltip-text">South Dakota</div>
+            </foreignObject>
+          </g>
+
+          <!-- Tennessee -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="929,477,918,517,1057,506,1111,456"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="950" y="478" width="150" height="40">
+              <div class="tooltip-text">Tennessee</div>
+            </foreignObject>
+          </g>
+
+          <!-- Texas -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="603,475,671,481,671,538,728,563,755,560,792,563,819,572,819,612,833,642,828,677,733,790,665,770,617,701,574,710,500,608,505,598,592,609"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="675" y="610" width="150" height="40">
+              <div class="tooltip-text">Texas</div>
+            </foreignObject>
+          </g>
+
+          <!-- Utah -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="373,288,432,300,431,326,480,334,463,445,347,425"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="388" y="362" width="150" height="40">
+              <div class="tooltip-text">Utah</div>
+            </foreignObject>
+          </g>
+
+          <!-- Vermont -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1253,179,1289,166,1279,208,1286,231,1271,236"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1228" y="190" width="150" height="40">
+              <div class="tooltip-text">Vermont</div>
+            </foreignObject>
+          </g>
+
+          <!-- Virginia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1077,456,1247,431,1194,363,1173,378,1152,398,1141,430,1103,433"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1145" y="392" width="150" height="40">
+              <div class="tooltip-text">Virginia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Washington -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="191,101,234,142,263,142,284,148,310,146,333,159,335,134,356,63,207,36"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="220" y="85" width="150" height="40">
+              <div class="tooltip-text">Washington</div>
+            </foreignObject>
+          </g>
+
+          <!-- West Virginia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1086,405,1105,430,1138,427,1146,398,1189,360,1178,355,1157,370,1150,361,1129,361,1122,336,1120,365"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1070" y="378" width="150" height="40">
+              <div class="tooltip-text">West Virginia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Wisconsin -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="860,178,843,206,844,225,877,271,884,295,949,293,952,236,945,218,927,200,898,199,891,179"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="860" y="225" width="150" height="40">
+              <div class="tooltip-text">Wisconsin</div>
+            </foreignObject>
+          </g>
+
+          <!-- Wyoming -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="450,211,435,323,582,339,594,232"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="472" y="262" width="150" height="40">
+              <div class="tooltip-text">Wyoming</div>
+            </foreignObject>
+          </g>
+
+        </svg>
+
+
+
+
+
+        <svg class="asia-map" viewBox="0 0 1400 1300" preserveAspectRatio="xMidYMid meet">
+          <image href="./Map-ASIA.svg" width="1400" height="1300" />
+
+          <!-- Afghanistan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="377,679,359,695,365,703,359,724,363,737,359,753,373,761,414,759,415,741,436,738,455,732,459,712,476,704,476,682,489,677,520,667,508,662,488,669,482,648,467,654,455,664,424,657,414,663,391,677"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="360" y="692" width="150" height="40">
+              <div class="tooltip-text">Afghanistan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Armenia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="205,564,213,580,222,596,232,595,227,580,221,569"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="175" y="566" width="150" height="40">
+              <div class="tooltip-text">Armenia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Azerbaijan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="226,569,234,579,233,592,245,591,245,605,268,585,258,570,238,568"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="198" y="571" width="150" height="40">
+              <div class="tooltip-text">Azerbaijan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Bahrain -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="217,738,232,743,233,761,224,768,208,766,206,746"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="185" y="741" width="150" height="40">
+              <div class="tooltip-text">Bahrain</div>
+            </foreignObject>
+          </g>
+
+          <!-- Bangladesh -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="681,810,679,837,698,868,734,887,731,846,722,855,710,849,726,826,697,829,693,815"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="653" y="827" width="150" height="40">
+              <div class="tooltip-text">Bangladesh</div>
+            </foreignObject>
+          </g>
+
+          <!-- Bhutan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="694,788,688,799,696,803,706,797,718,800,720,792"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="667" y="782" width="150" height="40">
+              <div class="tooltip-text">Bhutan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Brunei -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1031,1033,1046,1032,1054,1044,1051,1058,1038,1061,1026,1054,1026,1040"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1005" y="1032" width="150" height="40">
+              <div class="tooltip-text">Brunei</div>
+            </foreignObject>
+          </g>
+
+          <!-- Cambodia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="898,950,882,949,873,957,877,986,885,999,896,1003,916,990,916,975,934,969,929,950,920,949,910,957"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="857" y="958" width="150" height="40">
+              <div class="tooltip-text">Cambodia</div>
+            </foreignObject>
+          </g>
+
+          <!-- China -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="515,635,521,648,524,664,534,682,550,684,567,716,573,730,563,739,570,752,583,754,589,763,609,765,629,779,651,791,670,791,685,791,699,782,722,788,739,773,744,761,772,755,781,773,795,766,807,796,802,828,816,835,823,855,844,856,840,844,877,831,895,820,911,822,910,833,926,841,936,878,960,882,995,820,1031,793,1073,681,1012,614,1036,582,1014,574,1038,509,1049,506,1063,473,1053,454,1064,431,1048,403,1026,423,1011,416,980,411,945,385,913,385,901,399,911,408,908,445,891,445,903,465,926,458,938,464,934,479,921,485,918,507,889,531,871,565,844,571,824,586,792,579,765,575,740,586,728,565,701,554,680,559,678,533,665,517,652,515,645,501,629,516,629,532,623,541,607,542,610,558,583,563,588,584,579,602,536,626,525,618"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="757" y="658" width="150" height="40">
+              <div class="tooltip-text">China</div>
+            </foreignObject>
+          </g>
+
+          <!-- East Timor -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1182,1187,1193,1192,1197,1206,1190,1217,1176,1218,1167,1208,1169,1195"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1134" y="1190" width="150" height="40">
+              <div class="tooltip-text">East Timor</div>
+            </foreignObject>
+          </g>
+
+          <!-- Georgia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="195,523,180,543,210,558,224,567,239,564,228,549,216,545,213,531"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="175" y="530" width="150" height="40">
+              <div class="tooltip-text">Georgia</div>
+            </foreignObject>
+          </g>
+
+          <!-- India -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="770,759,781,778,781,789,766,793,753,818,750,834,740,844,736,865,732,837,718,846,733,820,702,825,697,813,680,806,675,841,689,855,693,868,589,972,574,1032,550,1076,531,1070,468,896,442,882,424,846,443,837,468,842,455,799,479,798,495,780,525,736,506,726,503,711,509,695,510,675,520,669,531,684,546,686,567,727,557,742,586,764,577,783,608,804,630,804,667,816,675,794,685,795,693,806,707,804,724,804,723,792,751,763"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="540" y="850" width="150" height="40">
+              <div class="tooltip-text">India</div>
+            </foreignObject>
+          </g>
+
+          <!-- Indonesia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="780,1084,830,1095,882,1140,915,1140,969,1107,984,1117,1009,1114,1011,1100,1026,1098,1042,1085,1044,1072,1056,1059,1061,1046,1232,1011,1373,1017,1372,1127,1199,1191,1177,1184,1164,1192,1162,1207,1169,1218,1127,1246,891,1251,774,1127"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1000" y="1150" width="150" height="40">
+              <div class="tooltip-text">Indonesia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Iran -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="207,584,202,617,206,638,195,654,213,691,210,707,238,749,265,785,296,780,302,804,351,820,352,800,378,794,351,753,359,738,354,721,358,705,352,694,372,680,369,657,353,646,337,633,316,631,294,638,260,632,242,610,239,595,222,602"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="266" y="690" width="150" height="40">
+              <div class="tooltip-text">Iran</div>
+            </foreignObject>
+          </g>
+
+          <!-- Iraq -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="113,643,113,662,144,682,158,709,180,719,190,708,207,708,208,688,192,651,202,638,195,618,181,612,163,620,154,637"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="140" y="642" width="150" height="40">
+              <div class="tooltip-text">Iraq</div>
+            </foreignObject>
+          </g>
+
+          <!-- Israel -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="60,667,77,644,72,636,55,643"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="35" y="638" width="150" height="40">
+              <div class="tooltip-text">Israel</div>
+            </foreignObject>
+          </g>
+
+          <!-- Japan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1046,308,1138,423,1163,489,1130,555,1108,605,1152,637,1232,515,1183,386,1075,298"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1145" y="450" width="150" height="40">
+              <div class="tooltip-text">Japan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Jordan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="79,644,91,648,107,641,107,661,92,663,95,670,72,682,58,675"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="55" y="643" width="150" height="40">
+              <div class="tooltip-text">Jordan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Kazakhstan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="275,468,278,482,290,490,286,501,301,565,316,567,326,580,338,536,380,538,379,552,393,548,399,565,429,570,440,589,438,597,448,609,479,595,489,584,503,586,515,576,531,585,558,585,581,594,581,575,576,560,607,557,604,538,620,537,626,526,624,516,642,501,623,502,608,485,577,480,545,433,519,443,494,419,426,430,416,468,425,479,394,474,389,461,362,461,351,448,330,440,314,448,309,459,294,455"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="440" y="505" width="150" height="40">
+              <div class="tooltip-text">Kazakhstan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Kuwait -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="194,710,208,711,213,720,212,729,207,736,196,738,185,731,185,717"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="165" y="710" width="150" height="40">
+              <div class="tooltip-text">Kuwait</div>
+            </foreignObject>
+          </g>
+
+          <!-- Kyrgyzstan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="474,623,510,617,489,600,492,590,506,589,515,581,532,589,560,588,576,596,563,607,541,620,525,615,513,626,509,637"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="475" y="590" width="150" height="40">
+              <div class="tooltip-text">Kyrgyzstan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Laos -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="849,844,845,860,834,860,834,871,843,888,847,910,855,896,864,903,875,892,903,924,902,946,911,949,928,945,928,917,911,907,884,888,879,870,863,870,856,853"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="833" y="865" width="150" height="40">
+              <div class="tooltip-text">Laos</div>
+            </foreignObject>
+          </g>
+
+          <!-- Lebanon -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="82,612,95,612,106,620,105,631,96,643,83,643,72,632,74,620"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="47" y="612" width="150" height="40">
+              <div class="tooltip-text">Lebanon</div>
+            </foreignObject>
+          </g>
+
+          <!-- Malaysia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="845,1069,864,1074,876,1063,901,1096,1027,1020,1065,1005,1095,1027,1089,1042,1062,1044,1055,1033,1034,1031,1019,1046,1024,1061,1034,1069,1048,1066,1041,1079,1039,1088,1027,1098,1014,1096,1006,1113,991,1116,976,1104,905,1110,882,1109,877,1120,865,1118,847,1095"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="830" y="1075" width="150" height="40">
+              <div class="tooltip-text">Malaysia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Maldives -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="461,1043,471,1049,479,1063,485,1079,487,1101,485,1119,482,1133,471,1137,459,1121,452,1092,451,1064"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="428" y="1077" width="150" height="40">
+              <div class="tooltip-text">Maldives</div>
+            </foreignObject>
+          </g>
+
+          <!-- Mongolia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="651,498,656,512,671,515,685,538,682,554,701,549,729,562,743,581,766,570,823,581,844,567,870,560,884,528,913,508,917,482,928,475,933,468,923,464,898,468,887,444,875,444,843,471,822,470,806,463,772,468,760,453,729,451,733,482,701,485,699,480,667,480"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="750" y="505" width="150" height="40">
+              <div class="tooltip-text">Mongolia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Myanmar -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="740,887,734,873,740,866,744,846,754,836,756,815,769,797,782,792,790,771,802,794,795,829,811,837,818,858,832,860,827,873,800,889,803,900,800,914,816,935,811,947,814,960,821,965,830,987,827,1011,750,936"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="740" y="855" width="150" height="40">
+              <div class="tooltip-text">Myanmar</div>
+            </foreignObject>
+          </g>
+
+          <!-- Nepal -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="583,780,609,800,629,799,642,805,662,811,671,806,670,795,645,794,603,768,588,771"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="596" y="780" width="150" height="40">
+              <div class="tooltip-text">Nepal</div>
+            </foreignObject>
+          </g>
+
+          <!-- North Korea -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1065,482,1061,487,1051,511,1037,515,1033,543,1048,563,1075,544"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1002" y="515" width="150" height="40">
+              <div class="tooltip-text">North Korea</div>
+            </foreignObject>
+          </g>
+
+          <!-- Oman -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="288,808,330,844,291,893,238,917,226,875,268,872,286,850,276,832,280,815"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="255" y="860" width="150" height="40">
+              <div class="tooltip-text">Oman</div>
+            </foreignObject>
+          </g>
+
+          <!-- Pakistan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="505,673,506,694,495,714,500,729,519,737,508,758,497,767,488,777,473,795,452,795,451,810,459,825,463,837,446,835,427,842,353,815,359,803,383,795,358,757,372,764,416,763,420,743,440,742,456,737,466,711,479,710,480,685"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="407" y="757" width="150" height="40">
+              <div class="tooltip-text">Pakistan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Philippines -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1042,983,1121,1012,1197,978,1180,897,1103,811,1054,846"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1085" y="904" width="150" height="40">
+              <div class="tooltip-text">Philippines</div>
+            </foreignObject>
+          </g>
+
+          <!-- Qatar -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="229,776,244,779,244,794,238,805,218,803,215,783"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="201" y="775" width="150" height="40">
+              <div class="tooltip-text">Qatar</div>
+            </foreignObject>
+          </g>
+
+          <!-- Russia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="170,490,190,519,217,528,219,542,233,543,238,561,254,568,285,505,284,491,275,485,269,468,295,449,306,454,308,446,331,436,353,444,363,458,389,458,396,469,421,475,410,468,421,427,497,414,508,430,526,439,545,427,578,473,595,480,609,479,623,495,646,495,659,485,665,476,699,475,706,480,730,481,725,449,760,449,774,465,803,456,826,466,845,464,876,440,905,440,906,408,896,398,913,383,924,383,945,380,980,407,1016,413,1027,419,1049,398,1061,418,1069,435,1057,456,1070,474,1086,474,1110,427,1091,367,1046,320,1021,318,1069,245,1200,302,1195,45,776,88,608,42,182,255"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="620" y="320" width="150" height="40">
+              <div class="tooltip-text">Russia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Saudi Arabia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="50,674,69,686,85,677,102,674,98,665,116,665,139,682,156,711,177,720,184,738,201,745,201,761,215,774,210,795,226,810,231,821,274,836,279,851,268,866,228,871,187,863,147,888,139,873,117,871,100,878,59,793"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="89" y="765" width="150" height="40">
+              <div class="tooltip-text">Saudi Arabia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Singapore -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="886,1108,902,1108,908,1121,907,1133,894,1139,881,1134,879,1117"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="848" y="1109" width="150" height="40">
+              <div class="tooltip-text">Singapore</div>
+            </foreignObject>
+          </g>
+
+          <!-- South Korea -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1056,562,1078,607,1108,576,1082,543"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1028" y="557" width="150" height="40">
+              <div class="tooltip-text">South Korea</div>
+            </foreignObject>
+          </g>
+
+          <!-- Sri Lanka -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="576,1038,568,1074,577,1096,602,1093,600,1051"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="545" y="1055" width="150" height="40">
+              <div class="tooltip-text">Sri Lanka</div>
+            </foreignObject>
+          </g>
+
+          <!-- Syria -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="97,605,122,595,140,606,175,609,158,617,156,627,145,635,109,638,109,620,101,614"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="105" y="603" width="150" height="40">
+              <div class="tooltip-text">Syria</div>
+            </foreignObject>
+          </g>
+
+          <!-- Taiwan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1082,740,1064,736,1061,779,1078,788"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1037" y="745" width="150" height="40">
+              <div class="tooltip-text">Taiwan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Tajikistan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="471,630,488,632,511,641,520,657,502,657,490,663,489,646,472,646,458,658,445,657,452,642,446,631,472,610"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="439" y="627" width="150" height="40">
+              <div class="tooltip-text">Tajikistan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Thailand -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="832,876,806,889,805,913,823,936,817,949,821,959,835,994,819,1032,822,1046,843,1063,861,1067,870,1060,840,1012,850,976,876,983,868,957,880,945,892,946,902,939,898,924,886,907,874,898,864,908,858,903,850,918,838,904,840,892"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="809" y="923" width="150" height="40">
+              <div class="tooltip-text">Thailand</div>
+            </foreignObject>
+          </g>
+
+          <!-- Turkey -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="197,614,198,594,205,579,202,557,147,532,110,507,28,502,22,564,76,587,96,600,126,592,139,605,175,605"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="87" y="545" width="150" height="40">
+              <div class="tooltip-text">Turkey</div>
+            </foreignObject>
+          </g>
+
+          <!-- Turkmenistan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="300,571,292,636,304,632,318,627,328,628,342,630,349,639,364,649,377,663,373,674,384,677,385,669,403,670,410,654,431,651,403,631,391,606,378,596,368,578,352,583,343,594,325,584,316,570"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="288" y="594" width="150" height="40">
+              <div class="tooltip-text">Turkmenistan</div>
+            </foreignObject>
+          </g>
+
+          <!-- United Arab Emirates -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="231,818,273,832,276,814,289,804,289,789,228,811"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="178" y="797" width="170" height="40">
+              <div class="tooltip-text">United Arab Emirates</div>
+            </foreignObject>
+          </g>
+
+          <!-- Uzbekistan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="339,542,328,581,342,588,353,576,372,575,379,591,394,604,406,627,438,654,446,643,438,625,453,620,476,606,478,617,504,616,483,602,483,594,462,606,445,614,433,597,435,586,427,574,394,570,389,552,377,558,374,542"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="368" y="580" width="150" height="40">
+              <div class="tooltip-text">Uzbekistan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Vietnam -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="857,841,865,866,880,862,885,883,901,898,922,909,932,917,932,945,938,970,921,978,920,991,907,997,897,1008,905,1032,968,965,947,902,906,871,921,842,907,837,907,824,893,825,879,835"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="901" y="900" width="150" height="40">
+              <div class="tooltip-text">Vietnam</div>
+            </foreignObject>
+          </g>
+
+          <!-- Yemen -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="223,876,236,919,105,943,96,922,98,883,112,873,135,876,147,892,186,866"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="131" y="886" width="150" height="40">
+              <div class="tooltip-text">Yemen</div>
+            </foreignObject>
+          </g>
+
+        </svg>
+
+
+
+
+        <svg class="southamerica-map" viewBox="0 0 1400 1600" preserveAspectRatio="xMidYMid meet">
+          <image href="./Map-SOUTHAMERICA.svg" width="1400" height="1600" />
+
+          <!-- Argentina -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="563,757,558,787,537,797,537,842,540,851,530,854,508,897,508,918,497,944,511,994,499,1027,502,1042,485,1055,485,1089,493,1100,480,1110,471,1149,474,1186,467,1191,466,1203,472,1211,474,1235,487,1246,471,1251,484,1262,474,1272,469,1313,459,1327,463,1342,438,1379,445,1406,462,1402,461,1433,472,1440,530,1450,532,1517,619,1528,537,1462,532,1400,562,1382,600,1314,620,1168,660,1162,781,1078,724,995,732,930,777,878,817,849,814,826,803,825,801,843,777,866,720,859,741,817,699,793,675,784,640,748,624,751,615,765,605,752,582,746"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="572" y="940" width="150" height="40">
+              <div class="tooltip-text">Argentina</div>
+            </foreignObject>
+          </g>
+
+          <!-- Bolivia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="615,758,622,743,645,747,662,695,715,686,733,696,741,668,737,659,726,650,726,634,690,632,689,618,681,602,689,602,688,579,663,576,632,558,614,556,593,537,590,502,572,506,532,528,517,526,533,555,528,568,527,586,522,602,521,619,531,628,515,650,537,692,532,711,549,762,557,760,575,742,603,747"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="578" y="628" width="150" height="40">
+              <div class="tooltip-text">Bolivia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Brazil -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="805,816,817,821,824,842,817,858,800,867,779,882,746,920,760,914,777,934,783,930,832,969,822,984,830,994,926,887,931,825,1057,767,1116,665,1117,577,1193,483,1185,414,1073,355,897,293,863,226,837,271,805,272,792,263,777,265,779,277,753,277,717,292,697,276,692,255,703,234,694,224,693,213,678,225,651,236,642,244,612,234,623,258,636,267,594,297,573,299,560,288,557,274,535,279,510,278,510,287,525,298,503,302,504,310,518,328,505,396,491,394,467,399,449,411,445,430,435,448,432,456,450,491,465,501,477,500,493,492,493,523,528,524,573,498,592,496,593,534,611,551,632,556,664,572,692,577,687,610,696,624,724,629,729,649,747,666,737,707,738,747,755,749,769,744,784,757,788,783,804,780,812,788"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="868" y="528" width="150" height="40">
+              <div class="tooltip-text">Brazil</div>
+            </foreignObject>
+          </g>
+
+          <!-- Chile -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="495,674,509,670,510,657,523,673,534,692,526,715,534,727,546,762,560,764,555,784,529,799,532,848,518,862,518,872,506,882,502,895,502,920,490,942,508,993,495,1020,497,1042,477,1057,480,1087,488,1098,471,1112,468,1178,464,1196,469,1214,469,1235,480,1246,468,1249,479,1262,467,1270,468,1281,467,1297,463,1313,452,1327,457,1339,448,1355,433,1379,446,1410,459,1406,459,1439,477,1445,529,1452,529,1521,571,1527,523,1544,441,1512,384,1423,388,1255"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="460" y="960" width="150" height="40">
+              <div class="tooltip-text">Chile</div>
+            </foreignObject>
+          </g>
+
+          <!-- Colombia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="487,77,451,100,435,135,447,135,458,155,455,166,469,179,500,176,513,195,552,192,542,214,553,245,544,256,562,273,504,274,503,288,518,294,497,300,502,317,510,325,511,338,506,387,493,382,506,361,487,350,447,355,432,331,403,307,391,299,379,302,367,300,347,289,330,278,354,232,349,172,390,98,482,63"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="409" y="230" width="150" height="40">
+              <div class="tooltip-text">Colombia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Ecuador -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="306,391,330,404,338,388,341,371,372,360,391,345,401,325,398,305,364,305,336,286,306,296,288,350,309,375"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="306" y="325" width="150" height="40">
+              <div class="tooltip-text">Ecuador</div>
+            </foreignObject>
+          </g>
+
+          <!-- French Guiana -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="817,198,805,219,812,240,809,268,835,270,861,223,840,204"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="765" y="222" width="150" height="40">
+              <div class="tooltip-text">French Guiana</div>
+            </foreignObject>
+          </g>
+
+          <!-- Guyana -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="681,206,696,211,698,223,707,236,696,246,697,273,716,288,757,271,745,251,731,234,735,214,748,208,752,193,727,160,703,147,684,164,695,178,675,182,676,197"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="685" y="210" width="150" height="40">
+              <div class="tooltip-text">Guyana</div>
+            </foreignObject>
+          </g>
+
+          <!-- Paraguay -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="664,697,711,690,733,700,733,725,734,749,759,754,770,748,780,762,781,785,800,785,803,794,800,821,796,843,776,863,725,856,746,815,693,785,680,781,649,751"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="696" y="760" width="150" height="40">
+              <div class="tooltip-text">Paraguay</div>
+            </foreignObject>
+          </g>
+
+          <!-- Peru -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="403,310,433,335,449,360,490,353,505,365,490,383,504,393,495,389,450,405,441,434,425,451,447,495,463,506,490,496,489,524,514,528,527,554,523,585,516,603,518,618,524,629,508,648,503,666,490,670,393,612,314,462,280,428,280,391,306,372,306,394,331,408,344,376,382,360,400,340"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="370" y="480" width="150" height="40">
+              <div class="tooltip-text">Peru</div>
+            </foreignObject>
+          </g>
+
+          <!-- Suriname -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="756,194,754,209,738,218,735,231,761,270,772,272,769,262,797,258,806,263,809,240,802,216,811,198,791,188"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="731" y="216" width="150" height="40">
+              <div class="tooltip-text">Suriname</div>
+            </foreignObject>
+          </g>
+
+          <!-- Uruguay -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="740,925,728,1002,748,1018,802,1028,829,998,817,984,827,971,782,934,776,942,759,917"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="735" y="957" width="150" height="40">
+              <div class="tooltip-text">Uruguay</div>
+            </foreignObject>
+          </g>
+
+          <!-- Venezuela -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="474,87,456,101,443,127,457,140,465,155,462,168,472,173,501,173,515,190,557,188,546,214,558,244,549,256,568,272,566,287,575,293,595,293,628,270,600,228,644,237,682,216,670,184,689,176,680,164,701,145,675,116,654,96,553,91,513,79"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="568" y="160" width="150" height="40">
+              <div class="tooltip-text">Venezuela</div>
+            </foreignObject>
+          </g>
+
+        </svg>
+
+
+
+
+
+        <svg class="africa-map" viewBox="0 0 1400 1600" preserveAspectRatio="xMidYMid meet">
+          <image href="./Map-AFRICA.svg" width="1400" height="1600" />
+
+          <!-- Algeria -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="383,172,396,226,356,242,362,252,335,260,335,272,301,278,278,291,278,317,464,460,464,469,484,466,502,459,602,389,595,380,586,372,574,373,565,354,556,341,563,330,566,281,552,232,529,205,524,192,535,182,541,167,540,141,521,134,424,143"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="410" y="300" width="150" height="40">
+              <div class="tooltip-text">Algeria</div>
+            </foreignObject>
+          </g>
+
+          <!-- Angola -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="601,1144,625,1134,641,1142,710,1144,720,1152,759,1155,787,1147,765,1124,766,1062,801,1062,801,1029,770,1028,771,1005,764,961,743,961,743,953,732,956,725,974,712,971,697,976,675,934,612,937,619,988,635,1039,605,1094"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="665" y="1040" width="150" height="40">
+              <div class="tooltip-text">Angola</div>
+            </foreignObject>
+          </g>
+
+          <!-- Benin -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="457,597,436,615,429,622,430,632,441,644,442,695,445,707,456,707,455,659,471,640,471,623,469,610"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="420" y="640" width="150" height="40">
+              <div class="tooltip-text">Benin</div>
+            </foreignObject>
+          </g>
+
+          <!-- Botswana -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="748,1165,749,1230,732,1229,730,1283,746,1302,743,1311,745,1316,755,1317,771,1304,774,1291,788,1288,798,1297,811,1297,818,1293,826,1276,837,1275,847,1255,879,1233,874,1224,860,1224,855,1203,842,1193,819,1152,790,1164,787,1156"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="759" y="1215" width="150" height="40">
+              <div class="tooltip-text">Botswana</div>
+            </foreignObject>
+          </g>
+
+          <!-- Burkina Faso -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="403,544,385,551,362,579,347,576,343,596,328,610,326,628,339,643,353,636,364,640,361,617,429,618,446,605,446,592,430,586,427,577,420,564,417,549"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="333" y="580" width="150" height="40">
+              <div class="tooltip-text">Burkina Faso</div>
+            </foreignObject>
+          </g>
+
+          <!-- Burundi -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="887,878,897,905,915,882,907,868,900,878"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="860" y="870" width="150" height="40">
+              <div class="tooltip-text">Burundi</div>
+            </foreignObject>
+          </g>
+
+          <!-- Cape Verde -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="65,513,77,517,82,529,77,538,65,544,54,538,55,518"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="16" y="515" width="150" height="40">
+              <div class="tooltip-text">Cape Verde</div>
+            </foreignObject>
+          </g>
+
+          <!-- Cameroon -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="551,737,562,751,576,765,572,778,612,779,645,780,671,789,671,770,646,731,647,709,662,686,655,663,639,648,641,638,664,639,654,622,654,600,646,586,651,607,635,626,624,657,612,673,605,696,594,702,582,692,563,709"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="558" y="725" width="150" height="40">
+              <div class="tooltip-text">Cameroon</div>
+            </foreignObject>
+          </g>
+
+          <!-- Central African Republic -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="662,690,651,711,652,734,667,760,675,774,689,753,713,755,714,739,732,727,756,742,776,747,785,732,795,734,813,726,821,730,830,721,844,726,858,728,858,720,843,715,839,702,822,685,822,678,791,658,796,638,781,618,769,626,756,650,740,659,722,657,725,664,687,686,681,683"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="652" y="690" width="200" height="40">
+              <div class="tooltip-text">Central African Republic</div>
+            </foreignObject>
+          </g>
+
+          <!-- Chad -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="651,401,656,429,670,445,661,490,661,516,640,537,635,558,642,572,654,577,650,585,659,602,657,619,667,638,644,642,644,647,652,655,659,659,665,680,671,681,677,678,688,680,701,675,719,665,717,654,738,654,755,647,770,618,786,616,776,606,775,592,766,591,771,574,783,530,797,530,793,460,665,389"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="685" y="530" width="150" height="40">
+              <div class="tooltip-text">Chad</div>
+            </foreignObject>
+          </g>
+
+          <!-- Comoros -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1103,1016,1117,1023,1121,1035,1115,1044,1105,1047,1095,1042,1090,1030,1095,1020"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1064" y="1017" width="150" height="40">
+              <div class="tooltip-text">Comoros</div>
+            </foreignObject>
+          </g>
+
+          <!-- Democratic Republic of the Congo -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="731,732,718,739,714,768,705,791,703,836,682,854,676,874,675,890,645,919,638,908,627,917,622,914,617,921,613,932,676,929,696,969,722,966,728,953,748,950,749,957,771,957,768,995,775,1026,806,1024,808,1030,828,1031,833,1040,844,1041,854,1034,859,1046,869,1049,880,1065,891,1067,891,1055,870,1042,878,999,870,993,881,977,911,974,904,958,888,937,889,891,883,874,894,845,891,833,899,826,897,809,923,781,913,781,916,757,897,742,870,748,861,728,828,730,809,733,786,739,781,752"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="650" y="855" width="300" height="40">
+              <div class="tooltip-text">Democratic Republic of the Congo</div>
+            </foreignObject>
+          </g>
+
+          <!-- Djibouti -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1112,590,1100,595,1090,606,1094,619,1108,617,1121,603"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1066" y="590" width="150" height="40">
+              <div class="tooltip-text">Djibouti</div>
+            </foreignObject>
+          </g>
+
+          <!-- Egypt -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="809,236,802,247,805,271,813,414,1007,414,949,324,968,278,947,240"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="849" y="320" width="150" height="40">
+              <div class="tooltip-text">Egypt</div>
+            </foreignObject>
+          </g>
+
+          <!-- Equatorial Guinea -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="571,783,595,783,597,801,567,802"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="510" y="777" width="150" height="40">
+              <div class="tooltip-text">Equatorial Guinea</div>
+            </foreignObject>
+          </g>
+
+          <!-- Eritrea -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1032,490,1023,502,1009,508,1002,543,1002,558,1021,560,1026,543,1036,551,1053,549,1079,561,1100,590,1112,587"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="995" y="511" width="150" height="40">
+              <div class="tooltip-text">Eritrea</div>
+            </foreignObject>
+          </g>
+
+          <!-- Eswatini -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="911,1298,905,1308,901,1316,908,1327,918,1322,918,1309"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="871" y="1300" width="150" height="40">
+              <div class="tooltip-text">Eswatini</div>
+            </foreignObject>
+          </g>
+
+          <!-- Ethiopia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1026,548,1025,564,1000,559,1004,577,992,596,984,606,980,623,971,627,969,647,967,668,954,671,953,678,967,683,975,695,992,720,1000,723,1000,733,1007,737,1017,738,1032,753,1056,758,1079,742,1088,748,1096,746,1100,742,1112,743,1122,730,1146,730,1192,676,1179,678,1121,653,1105,632,1104,619,1089,621,1086,607,1098,591,1078,566,1061,556,1037,554"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1006" y="652" width="150" height="40">
+              <div class="tooltip-text">Ethiopia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Gabon -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="599,780,600,805,567,804,551,849,591,896,603,889,597,870,615,864,617,854,628,866,639,867,646,857,645,835,635,821,644,802,630,801,623,784"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="569" y="825" width="150" height="40">
+              <div class="tooltip-text">Gabon</div>
+            </foreignObject>
+          </g>
+
+          <!-- Gambia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="197,566,191,577,179,585,161,590,144,587,132,577,139,564,154,556,173,556,186,558"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="127" y="559" width="150" height="40">
+              <div class="tooltip-text">Gambia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Ghana -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="363,622,372,672,359,708,368,733,381,740,429,715,419,687,424,669,419,660,416,636,411,622"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="360" y="660" width="150" height="40">
+              <div class="tooltip-text">Ghana</div>
+            </foreignObject>
+          </g>
+
+          <!-- Guinea -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="169,618,192,606,192,592,223,595,226,602,238,600,245,607,264,598,276,613,269,626,278,628,276,640,285,663,276,666,278,681,268,678,265,685,254,664,243,664,243,650,234,634,208,639,203,652,195,659,171,638"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="195" y="605" width="150" height="40">
+              <div class="tooltip-text">Guinea</div>
+            </foreignObject>
+          </g>
+
+          <!-- Guinea-Bissau -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="143,594,190,591,187,605,164,619,147,610"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="110" y="590" width="150" height="40">
+              <div class="tooltip-text">Guinea-Bissau</div>
+            </foreignObject>
+          </g>
+
+          <!-- Guinea-Bissau -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="143,594,190,591,187,605,164,619,147,610"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="110" y="590" width="150" height="40">
+              <div class="tooltip-text">Guinea-Bissau</div>
+            </foreignObject>
+          </g>
+
+          <!-- Ivory Coast -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="280,637,288,666,280,668,281,683,275,704,292,715,290,741,364,728,356,705,368,671,367,647,354,640,338,645,327,631,316,638,310,629,302,638"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="273" y="670" width="150" height="40">
+              <div class="tooltip-text">Ivory Coast</div>
+            </foreignObject>
+          </g>
+
+          <!-- Kenya -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="989,721,971,746,988,791,965,826,970,842,1032,880,1031,893,1054,911,1073,874,1091,854,1080,841,1080,773,1094,751,1079,747,1064,753,1057,762,1032,757,1014,743,997,734"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="998" y="800" width="150" height="40">
+              <div class="tooltip-text">Kenya</div>
+            </foreignObject>
+          </g>
+
+          <!-- Lesotho -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="838,1376,861,1353,873,1366,864,1376,848,1390"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="816" y="1357" width="150" height="40">
+              <div class="tooltip-text">Lesotho</div>
+            </foreignObject>
+          </g>
+
+          <!-- Liberia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="254,669,246,670,233,688,228,702,251,726,285,743,287,718,271,707,275,696,274,684,263,691"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="225" y="693" width="150" height="40">
+              <div class="tooltip-text">Liberia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Libya -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="593,210,594,226,570,245,570,257,563,261,571,286,567,307,567,331,561,341,577,366,597,372,603,387,631,397,640,406,665,387,793,457,792,451,816,451,800,231,765,216,743,211,691,246,633,213"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="660" y="312" width="150" height="40">
+              <div class="tooltip-text">Libya</div>
+            </foreignObject>
+          </g>
+
+          <!-- Madagascar -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1214,1037,1177,1093,1120,1117,1111,1191,1093,1245,1110,1295,1145,1306,1169,1287,1237,1094"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1108" y="1170" width="150" height="40">
+              <div class="tooltip-text">Madagascar</div>
+            </foreignObject>
+          </g>
+
+          <!-- Malawi -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="949,995,958,1008,960,1023,954,1035,954,1051,949,1065,945,1076,960,1087,975,1094,971,1109,970,1121,980,1129,989,1113,990,1096,983,1079,975,1081,968,1046,969,1019,965,1002"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="925" y="1050" width="150" height="40">
+              <div class="tooltip-text">Malawi</div>
+            </foreignObject>
+          </g>
+
+          <!-- Mali -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="336,365,312,362,327,521,330,523,325,537,258,535,244,545,226,540,226,550,217,556,222,575,228,596,238,595,247,601,265,592,278,611,276,622,283,632,301,634,315,622,317,631,325,628,322,611,339,591,343,576,359,572,386,549,403,543,424,545,435,537,468,537,471,521,479,509,480,470,463,475,463,459,447,450"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="375" y="480" width="150" height="40">
+              <div class="tooltip-text">Mali</div>
+            </foreignObject>
+          </g>
+
+          <!-- Mauritania -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="276,319,275,346,224,347,223,393,207,393,205,402,207,428,144,428,138,436,144,523,166,517,181,512,189,522,206,534,216,550,226,533,243,540,262,534,322,534,322,524,307,359,332,361"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="187" y="463" width="150" height="40">
+              <div class="tooltip-text">Mauritania</div>
+            </foreignObject>
+          </g>
+
+          <!-- Mauritius -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1266,1203,1274,1206,1281,1214,1276,1228,1266,1232,1255,1227,1251,1214,1257,1206"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1222" y="1204" width="150" height="40">
+              <div class="tooltip-text">Mauritius</div>
+            </foreignObject>
+          </g>
+
+          <!-- Morocco -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="140,425,174,424,185,409,191,385,212,362,232,321,255,323,273,318,274,289,327,267,338,255,356,251,357,239,391,224,379,169,320,158,269,215,252,249,258,267,226,299,205,302,145,388"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="220" y="280" width="150" height="40">
+              <div class="tooltip-text">Morocco</div>
+            </foreignObject>
+          </g>
+
+          <!-- Mozambique -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="981,1037,975,1053,978,1077,992,1092,994,1120,985,1121,979,1135,964,1123,965,1108,969,1097,963,1091,950,1084,903,1098,905,1115,923,1117,932,1125,945,1133,939,1178,942,1193,929,1214,913,1235,924,1276,918,1293,923,1318,938,1317,989,1266,974,1196,1069,1125,1078,1097,1072,1014,1054,1029,1007,1044"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="920" y="1150" width="150" height="40">
+              <div class="tooltip-text">Mozambique</div>
+            </foreignObject>
+          </g>
+
+          <!-- Namibia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="746,1161,790,1155,796,1159,817,1151,808,1145,758,1156,718,1155,708,1146,639,1147,631,1140,619,1139,602,1146,599,1162,639,1239,642,1287,659,1348,668,1349,682,1339,689,1354,707,1360,724,1349,730,1225,749,1225"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="647" y="1230" width="150" height="40">
+              <div class="tooltip-text">Namibia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Niger -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="420,548,420,563,432,584,452,590,450,596,462,592,471,602,468,590,474,579,479,570,503,564,520,572,527,580,542,574,560,586,582,575,595,572,613,580,628,569,640,592,649,579,639,577,638,564,629,558,639,529,657,514,657,482,666,448,652,428,649,403,640,411,631,397,603,389,508,460,482,469,485,513,476,526,473,539,438,542"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="538" y="490" width="150" height="40">
+              <div class="tooltip-text">Niger</div>
+            </foreignObject>
+          </g>
+
+          <!-- Nigeria -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="458,705,458,664,476,638,476,623,473,611,473,592,485,570,505,569,515,574,524,584,539,581,565,589,581,577,597,577,610,584,630,574,638,595,646,602,649,607,633,622,617,663,603,691,592,696,578,691,568,697,548,737,514,751,482,713"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="510" y="625" width="150" height="40">
+              <div class="tooltip-text">Nigeria</div>
+            </foreignObject>
+          </g>
+
+          <!-- Republic of the Congo -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="628,781,647,784,677,795,678,778,691,753,712,759,709,772,702,799,703,821,699,835,675,859,670,879,672,891,652,911,647,904,631,906,630,914,623,903,605,919,594,900,608,885,600,872,617,870,619,862,628,870,642,868,649,859,649,831,641,822,647,799,630,796"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="580" y="825" width="200" height="40">
+              <div class="tooltip-text">Republic of the Congo</div>
+            </foreignObject>
+          </g>
+
+          <!-- Rwanda -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="896,849,894,861,887,874,894,875,905,863,915,862,912,847"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="863" y="847" width="200" height="40">
+              <div class="tooltip-text">Rwanda</div>
+            </foreignObject>
+          </g>
+
+          <!-- São Tomé and Príncipe -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="524,804,536,807,542,817,540,830,529,835,519,833,513,823,515,810"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="435" y="806" width="200" height="40">
+              <div class="tooltip-text">São Tomé and Príncipe</div>
+            </foreignObject>
+          </g>
+
+          <!-- Senegal -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="128,550,137,561,170,554,198,563,201,574,179,589,208,592,221,591,226,581,216,569,212,553,194,524,171,517,152,523"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="132" y="525" width="200" height="40">
+              <div class="tooltip-text">Senegal</div>
+            </foreignObject>
+          </g>
+
+          <!-- Seychelles -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1326,904,1339,906,1347,914,1347,924,1340,931,1330,935,1320,929,1319,917"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1285" y="906" width="200" height="40">
+              <div class="tooltip-text">Seychelles</div>
+            </foreignObject>
+          </g>
+
+          <!-- Sierra Leone -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="196,660,211,643,223,639,233,642,238,652,242,671,231,684,224,699,201,686"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="168" y="650" width="200" height="40">
+              <div class="tooltip-text">Sierra Leone</div>
+            </foreignObject>
+          </g>
+
+          <!-- Somalia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="1115,613,1106,628,1120,649,1177,674,1194,674,1148,734,1125,734,1112,747,1100,748,1086,772,1085,841,1093,853,1182,767,1227,699,1250,598,1135,627"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="1130" y="720" width="200" height="40">
+              <div class="tooltip-text">Somalia</div>
+            </foreignObject>
+          </g>
+
+          <!-- South Africa -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="730,1285,729,1353,707,1365,687,1358,678,1343,670,1359,694,1417,687,1426,692,1458,717,1476,761,1455,814,1458,861,1429,911,1374,936,1321,922,1319,918,1330,907,1330,866,1353,876,1363,866,1385,856,1389,847,1394,834,1380,848,1358,906,1328,896,1321,902,1301,917,1295,920,1272,913,1239,885,1234,856,1251,845,1262,838,1282,826,1283,823,1298,802,1303,786,1293,776,1296,766,1312,748,1323,738,1314,743,1303"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="760" y="1350" width="200" height="40">
+              <div class="tooltip-text">South Africa</div>
+            </foreignObject>
+          </g>
+
+          <!-- South Sudan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="805,664,824,675,826,684,840,701,847,713,856,717,868,738,875,739,900,738,913,754,938,752,957,751,990,722,978,701,960,684,949,681,954,665,964,664,962,637,953,628,947,598,937,601,943,621,932,631,924,644,915,647,900,637,885,650,869,650,855,648,844,650,834,633,821,633"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="843" y="680" width="200" height="40">
+              <div class="tooltip-text">South Sudan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Sudan -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="801,663,807,658,819,631,832,631,845,643,868,643,871,645,884,648,900,629,915,639,921,642,937,619,932,602,953,592,953,612,954,624,965,633,978,617,981,600,996,589,1000,560,1007,502,1020,500,1031,491,1006,418,814,418,816,454,797,455,800,539,783,534,777,559,772,585,783,606,790,627,800,636,795,654"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="865" y="512" width="200" height="40">
+              <div class="tooltip-text">Sudan</div>
+            </foreignObject>
+          </g>
+
+          <!-- Tanzania -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="912,843,934,843,931,869,963,869,955,858,969,846,1025,879,1027,890,1053,911,1067,1016,1047,1026,1016,1037,1001,1040,979,1034,963,994,949,992,917,981,896,938,897,910,920,880,910,869,920,866"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="934" y="920" width="200" height="40">
+              <div class="tooltip-text">Tanzania</div>
+            </foreignObject>
+          </g>
+
+          <!-- Togo -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="414,622,427,621,427,631,437,648,442,713,435,718,426,705,422,687,424,671"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="400" y="649" width="200" height="40">
+              <div class="tooltip-text">Togo</div>
+            </foreignObject>
+          </g>
+
+          <!-- Tunisia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="544,137,542,150,542,166,541,183,531,194,530,205,557,229,561,260,567,257,568,241,591,224,588,204,573,192,582,177,583,135,561,126"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="525" y="175" width="200" height="40">
+              <div class="tooltip-text">Tunisia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Uganda -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="924,755,917,759,917,778,926,781,910,798,903,812,898,835,900,845,913,840,932,841,938,827,960,817,968,822,983,788,969,747,957,755"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="910" y="772" width="200" height="40">
+              <div class="tooltip-text">Uganda</div>
+            </foreignObject>
+          </g>
+
+          <!-- Zambia -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="803,1027,805,1064,770,1066,767,1120,785,1146,807,1144,821,1150,848,1157,869,1127,901,1108,900,1098,947,1083,939,1075,952,1053,949,1035,954,1017,947,999,923,986,910,975,884,983,876,995,882,1004,874,1043,892,1052,897,1071,881,1071,868,1053,858,1052,853,1041,844,1050,829,1044,826,1035"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="795" y="1080" width="200" height="40">
+              <div class="tooltip-text">Zambia</div>
+            </foreignObject>
+          </g>
+
+          <!-- Zimbabwe -->
+          <g class="state">
+            <polygon class="hotspot-polygon" points="823,1155,849,1159,873,1128,897,1110,900,1119,921,1118,926,1126,942,1131,942,1161,936,1175,933,1185,936,1189,933,1203,927,1215,910,1234,894,1234,882,1232,877,1224,864,1222,858,1204,835,1185"></polygon>
+            <foreignObject class="tooltip-text-wrapper" x="842" y="1160" width="200" height="40">
+              <div class="tooltip-text">Zimbabwe</div>
+            </foreignObject>
+          </g>
+
+        </svg>
+
+
+
+
+
+
+    </main>
+    
+
+    
+
+
+    <footer>
+    
+    </footer>
+
+  </body>
+
+</html>
